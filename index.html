@@ -1,0 +1,27 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+<table id="table">
+	<tr>
+		<td valign="top" style="width:30%" align="center">
+			<textarea id="ciphertext"  style="width: 300px; height: 300px">gvlxr smqcl gvyxq spnxr xlyzs nyqiq rszvr bnglk xwbxg lgwgl qiklz vncel gvqwg rxxwy limri jxzrk nvlig xgvnc nrcnz snigj qdxlg nxgvr grxxl xglir xqswg lqibj zcqpl olimd cnawn iklnx bwggv lxlxr dwssx qspnc nhksw olimz wikgw rglqi krzlg rslfr glqil onigl dlkrg lqiqd wikqy yqieq coxaw lzawl zoqnx gvnxr yngvl imelg vrold dncni grsmq clgvy bwgvr xgcqw bsnel gvqwg xzrkn vligx gvlxr smqcl gvywx nxrkq yzsng nsjol ddncn iggnk vilaw nnign cgvnx gclim gqbno nkcjz gnoli gvnbq hrijg vlimg vrglx iqgrs nggnc xzrkn xzwik gwrgl qiels sbnlm iqcno gvlxl xrzcq qdqdk qiknz gxqsp ncrio bjiqy nrixk rionk cjzgr ssklz vncgn hgxeq coxsn xxgvr idqwc snggn cxsqi mriow ikqyy qieqc oxels siqgb ncnkq milfn ogvnr smqcl gvylx zcqbr blslx glkgv nnhry zsngn hgels sgrtn rcqwi odlpn vwioc nolgn crglq ixgqr cclpn rggvn xqswg lqiiq gngvr ggvlx rsmqc lgvyy rjiqg mnggv ndwss gnhgq cxzrk limcl mvgbw gkrim ngpnc jksqx n
+			</textarea>
+			<input onclick="start()" type="button" value="Start"/>
+			<p id="info"></p>
+			<p id="text"></p>
+			<p id="letters" align="left"></p>
+			
+		</td>
+
+		<td valign="top">
+			This algorithm solves a simple <a target="_blank" href="http://en.wikipedia.org/wiki/Substitution_cipher">monoalphabetic substitution cipher</a> without assuming any space hints. There are plenty of sites that assist in a solution by providing frequencies, but this is a full solver (excluding punctuation, capitalization, identification of uncommon words).  <a target="_blank" href="http://www.quipqiup.com/index.php">quipquip</a> does the same thing with a different algorithm but has trouble without space hints. This algorithm uses a completely different technique. Enter the string to be decrypted in the box. Anything that is not a letter (spaces, punctuation) will be ignored. 
+			This is a proof of concept solver and by no means can decrypt all ciphertexts. Words less than 4 letters long and uncommon words will not be recognized. The algorithm is probabilistic. The example text will take around 500 iterations to arrive at the solution. Note that this algorithm may not get the full text or spacing right but can get very close.
+			<br><br>
+			<canvas id="data" width="600" height="400"></canvas>
+		</td>
+	</tr>
+</table>
+<script src="Chart.js"></script>
+<script src="dict.js"></script>
+<script src="solver.js"></script>
